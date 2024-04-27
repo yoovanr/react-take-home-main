@@ -181,11 +181,11 @@ export default function ProductsAddPage() {
                       name="type"
                       rules={{ required: true }}
                       control={control}
-                      placeholder="Select type"
                       render={({ field: { onChange, value } }) => (
                         <AppSelect
                           options={typeOptions}
                           value={value}
+                          placeholder="Select type"
                           onChange={(selectedOption) => {
                             onChange(selectedOption)
                             onChangeType(selectedOption)
@@ -209,12 +209,12 @@ export default function ProductsAddPage() {
                             name="sizes"
                             rules={{ required: true }}
                             control={control}
-                            placeholder="Select sizes"
                             render={({ field: { onChange, value } }) => (
                               <AppSelect
                                 isMulti
                                 options={sizeOptions}
                                 value={value}
+                                placeholder="Select sizes"
                                 onChange={(selectedOption) => {
                                   onChange(selectedOption)
                                 }}
@@ -355,6 +355,7 @@ export default function ProductsAddPage() {
                 <AppButton
                   variant="primary"
                   type="submit"
+                  className="w-full"
                   disabled={isDisabled}
                 >
                   Update product
@@ -362,6 +363,7 @@ export default function ProductsAddPage() {
 
                 <AppButton
                   variant="secondary"
+                  className="w-full"
                   onClick={() => navigateToProducts()}
                 >
                   Cancel

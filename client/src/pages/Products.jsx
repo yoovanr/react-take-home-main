@@ -1,6 +1,8 @@
 import { useQuery } from '@tanstack/react-query'
 
-import { Link, useNavigate } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
+
+import AppButton from '../components/App/AppButton'
 import AppLoading from '../components/App/AppLoading'
 
 import ProductsTable from '../components/Products/ProductsTable'
@@ -14,6 +16,10 @@ export default function ProductsPage() {
     queryKey: ['products'],
     queryFn: async () => (await getProducts()).data,
   })
+
+  const onCreateProduct = () => {
+    navigate('products/create')
+  }
 
   const onUpdateProduct = (productId) => {
     navigate(`products/${productId}`)
@@ -29,12 +35,13 @@ export default function ProductsPage() {
         </div>
 
         <div className="mt-3 md:mt-0">
-          <Link
-            className="inline-block px-4 py-2 text-white duration-150 font-medium bg-indigo-600 rounded-lg hover:bg-indigo-500 active:bg-indigo-700 md:text-sm"
-            to="/products/create"
+          <AppButton
+            className="w-fit"
+            variant="primary"
+            onClick={() => onCreateProduct()}
           >
             Add product
-          </Link>
+          </AppButton>
         </div>
       </div>
 

@@ -1,3 +1,5 @@
+import AppButton from '../App/AppButton'
+
 export default function ProductsTable({ data = [], onUpdateItem }) {
   return (
     <table className="w-full table-auto text-sm text-left">
@@ -23,12 +25,12 @@ export default function ProductsTable({ data = [], onUpdateItem }) {
               <td className="px-6 py-4 whitespace-nowrap">{item.brand}</td>
 
               <td className="text-right px-6 whitespace-nowrap">
-                <button
-                  className="py-2 px-3 font-medium text-indigo-600 hover:text-indigo-500 duration-150 hover:bg-gray-50 rounded-lg"
+                <AppButton
+                  variant="transparent"
                   onClick={() => onUpdateItem(item.id)}
                 >
                   Update
-                </button>
+                </AppButton>
               </td>
             </tr>
           ))

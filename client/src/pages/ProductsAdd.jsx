@@ -309,6 +309,7 @@ export default function ProductsAddPage() {
             <AppButton
               variant="primary"
               type="submit"
+              className="w-full"
               disabled={isDisabled}
             >
               Add product
@@ -316,6 +317,7 @@ export default function ProductsAddPage() {
 
             <AppButton
               variant="secondary"
+              className="w-full"
               onClick={() => navigateToProducts()}
             >
               Cancel
