@@ -1,47 +1,36 @@
-# react-take-home
+# Test Assigment for Search Pilot! :)
 
-React take home task for Sr. Frontend Dev role
+## Installation
+To run this project, follow these steps:
 
-Thank you for your application to SearchPilot! We greatly appreciate you taking the time to apply and your interest in working with us.
+1. Clone this repository to your local machine.
+2. Install dependencies for server:
+```bash
+npm install
+ ```
+3. Navigate to the client directory and install dependencies for client:
+```bash
+cd client && npm install && cd ..
+ ```
 
-We have created a take home task and thank you taking the time to complete SearchPilot take-home challenge for our senior frontend developer role.
+## Running the Application
 
-The task should hopefully not take too long. If you have any questions at all, please don’t hesitate to reach out to us.
+Once you've installed the dependencies, run the project in the root folder (not client):
+```bash
+npm run dev
+```
 
-The goal of this take home task is to build out a product list and product form. Please clone this repository: https://github.com/SearchPilot/react-take-home
+## Usage
 
-### Task
+After running the application, open a web browser and navigate to the specified URL (usually http://localhost:3000) to view the application.
 
-- Display a list of products (Endpoint: `GET /api/products` and individual product endpoint: `GET /api/products/:id`)
-- When user clicks on a product, user gets taken to a dynamic form and should see a form where they can edit product detail. Form should have these input fields:
-  - Product name (User should be able to validate a unique product name `POST /api/validate`)
-  - Product type
-  - When product type is selected, user should then see options such as:
-    - Size
-    - Features
-    - Brand
-- Save the form (Endpoints: `PUT /api/products/:id`) - Please see the product detail page low fidelity mockup
-- On the product list page, user can add a new product, which takes you to the product detail form page (Endpoint: `POST /api/products`)
-- If anything appears ambiguous, please make your own choice on how to proceed. If there appears to be a roadblock of some sort, please do email us.
+Note: The back-end typically runs on http://localhost:8080. Double-check that this HOST matches the one specified in the file ./client/src/services/instance.js.
 
-### Requirements
+## Technologies Used
+- **[React Hook Form](https://react-hook-form.com/):** A library for managing form state in React applications.
+- **[React Query](https://react-query.tanstack.com/):** A React library for managing, caching, synchronizing, and updating server state effortlessly.
+- **[Axios](https://axios-http.com/):** A promise-based HTTP client for making HTTP requests from the browser or Node.js environment.
+- **[React Select](https://react-select.com/):** A flexible and beautiful Select Input control for ReactJS.
+- **[React Toastify](https://fkhadra.github.io/react-toastify/introduction):** A simple and robust library for displaying toast notifications in React applications.
+- **[Tailwind CSS](https://tailwindcss.com/):** A utility-first CSS framework for creating custom designs quickly.
 
-- Use React to build the frontend of the web application
-- Implement all of the features shown in the design mockup and task list
-- Ensure that the application is responsive and works on all devices
-- Write clean, maintainable code that adheres to best practices
-
-### Submission
-
-Please submit your completed task as a GitHub repository or a CodeSandbox. Include instructions on how to run your application and any additional notes or comments that you think are relevant.
-
-### Design Mockup
-
-Product Detail Forms
-
-![Product Detail Form](./Product-Detail-Form.png)
-![image](Product-Detail-Form-1.png)
-
-Product Details Pages:
-
-Feel free to design/style the list of products as you wish.
